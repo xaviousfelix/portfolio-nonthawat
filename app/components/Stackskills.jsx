@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export default function Stackskills() {
+export default function StackSkills() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

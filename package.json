@@ -13,11 +13,17 @@
     "@tailwindcss/postcss": "^4.0.10",
     "@tailwindcss/vite": "^4.0.10",
     "clsx": "^2.1.1",
+    "file-saver": "^2.0.5",
+    "file-server": "^2.2.1",
     "motion": "^12.4.10",
     "next": "^15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-type-animation": "^3.2.0"
+    "react-fast-marquee": "^1.6.5",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
+    "react-type-animation": "^3.2.0",
+    "theme-change": "^2.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

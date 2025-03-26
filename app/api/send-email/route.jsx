@@ -28,8 +28,8 @@ export async function POST(req) {
     await transporter.sendMail(mailOptions);
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
-  } catch (error) {
+} catch (error) {
     console.error("Error sending email:", error);
-    return new Response(JSON.stringify({ error: "ไม่สามารถส่งอีเมลได้" }), { status: 500 });
-  }
+    return new Response(JSON.stringify({ error: `ไม่สามารถส่งอีเมลได้: ${error.message}` }), { status: 500 });
+}
 }

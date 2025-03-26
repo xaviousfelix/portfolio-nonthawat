@@ -1,6 +1,5 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import React from "react";
 import HeroSection from "./components/HeroSection";
 import StackSkills from "./components/Stackskills";
 import Footer from "./components/Footer";

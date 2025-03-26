@@ -1,5 +1,7 @@
+import React from "react";
 import "./globals.css";
 import { Kanit } from "next/font/google";
+import PropTypes from "prop-types";
 
 const kanit = Kanit({ subsets: ["thai", "latin"], weight: ["400", "700"] });
 
@@ -17,3 +19,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,  // Validate that 'children' is a required node
+};

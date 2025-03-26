@@ -1,7 +1,5 @@
-"use client";
+"use client"
 import React from "react";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -23,15 +21,13 @@ const skillsData = [
   },
   {
     title: "Database",
-    skills: [
-      { src: "/images/mysql.png", name: "MySQL" },
-    ],
+    skills: [{ src: "/images/mysql.png", name: "MySQL" }],
   },
   {
     title: "UI",
     skills: [
       { src: "/images/bootstrap.png", name: "Bootstrap" },
-      { src: "/images/Tailwind CSS.png", name: "Tailwind" },
+      { src: "/images/tailwindcss.png", name: "Tailwind" },
       { src: "/images/daisyui.png", name: "DaisyUI" },
     ],
   },
@@ -55,54 +51,53 @@ const skillsData = [
   },
   {
     title: "Languages",
-    skills: [
-      { src: "/images/nextjs.png", name: "Nextjs" },
-    ],
+    skills: [{ src: "/images/nextjs.png", name: "Nextjs" }],
   },
 ];
 
 export default function StackSkills() {
   return (
-    
-    <Marquee pauseOnHover={true} speed={100}>
-    <div className="flex space-x-6 gap-x-6 pr-12">
-      
-      {skillsData.map((category, index) => (
-        <div
-          key={index}
-          className="card w-96 h-96 shadow-2xl hover:border-primary border-grey-500 my-12"
-        >
-          <div className="card-body">
-            <h1 className="card-title flex justify-center pt-6">
-              {category.title}
-            </h1>
-            <div className="grid grid-cols-3 gap-4">
-              {category.skills.map((skill, skillIndex) => (
-                <div
-                  key={skillIndex}
-                  className="flex flex-col items-center p-2 rounded-lg transition-all duration-200 hover:scale-105"
-                >
-                  <div className="flex items-center justify-center mb-2 ">
-                    <Image
-                      src={skill.src}
-                      alt={skill.name}
-                      width={60}
-                      height={60}
-                      className="h-auto"
-                    />
-                  </div>
-                  <span className="text-sm font-medium text-center">
-                    {skill.name}
-                  </span>
+    <section id="StackSkills" className="my-16">
+      <h2 className="text-center text-5xl font-bold mb-8 text-white">
+        Tech Stack
+      </h2>
+      <Marquee pauseOnHover={true} speed={100}>
+        <div className="flex space-x-6 gap-x-6 pr-12">
+          {skillsData.map((category, index) => (
+            <div
+              key={index}
+              className="card w-96 h-96 shadow-2xl hover:border-primary border-grey-500 my-12"
+            >
+              <div className="card-body">
+                <h1 className="card-title flex justify-center pt-6">
+                  {category.title}
+                </h1>
+                <div className="grid grid-cols-3 gap-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div
+                      key={skillIndex}
+                      className="flex flex-col items-center p-2 rounded-lg transition-all duration-200 hover:scale-105"
+                    >
+                      <div className="flex items-center justify-center mb-2 ">
+                        <Image
+                          src={skill.src}
+                          alt={skill.name}
+                          width={60}
+                          height={60}
+                          className="h-auto w-auto"
+                        />
+                      </div>
+                      <span className="text-sm font-medium text-center">
+                        {skill.name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </Marquee>
-  
-  
+      </Marquee>
+    </section>
   );
 }

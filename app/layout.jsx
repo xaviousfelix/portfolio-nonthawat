@@ -1,11 +1,7 @@
-// import Head from "next/head";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Header from "./components/Header";
-// import { Toaster } from "react-hot-toast";
-// import ThemeContextProvider from "./context/Theme-context";
+import { Kanit } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const kanit = Kanit({ subsets: ["thai", "latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Nonthawat | Personal Portfolio",
@@ -14,10 +10,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className + "flex min-h-screen flex-col bg-[#121212]"}>
-          <Header />
-          {children}
+    <html lang="th">
+      <body className={kanit.className}>
+        {children}
       </body>
     </html>
   );

@@ -20,8 +20,8 @@ export default function ThemeSwitch() {
       <input
         type="checkbox"
         className="theme-controller"
-        checked={theme === "dark"}
-        onChange={() => setTheme(theme === "light" ? "dark" : "light")}
+        checked={theme === "business"}
+        onChange={() => setTheme(theme === "light" ? "business" : "light")}
       />
 
       {/* Sun icon */}

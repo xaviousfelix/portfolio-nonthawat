@@ -3,6 +3,7 @@ import "./globals.css";
 import { Kanit } from "next/font/google";
 import PropTypes from "prop-types";
 
+
 const kanit = Kanit({ subsets: ["thai", "latin"], weight: ["400", "700"] });
 
 export const metadata = {

@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export const runtime = 'nodejs'; // หรือ 'edge' ถ้าใช้ edge runtime
+export const runtime = 'edge';
 
 export async function POST(req) {
   try {
@@ -32,4 +32,5 @@ export async function POST(req) {
     console.error("Error sending email:", error);
     return new Response(JSON.stringify({ error: `ไม่สามารถส่งอีเมลได้: ${error.message}` }), { status: 500 });
 }
+
 }

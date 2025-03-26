@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import HeroSection from "./components/HeroSection";
-import StackSkills from "./components/StackSkills";
+import StackSkills from "./components/Stackskills";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import About from "./components/About";

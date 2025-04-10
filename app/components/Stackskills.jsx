@@ -21,12 +21,14 @@ const skillsData = [
   },
   {
     title: "Database",
-    skills: [{ src: "/images/mysql.png", name: "MySQL" }],
+    skills: [{ src: "/images/mysql.png", name: "MySQL"},
+      {src: "/images/sql-server.png", name: "SQL Server"},
+
+    ],
   },
   {
     title: "UI",
     skills: [
-      { src: "/images/bootstrap.png", name: "Bootstrap" },
       { src: "/images/tailwindcss.png", name: "Tailwind" },
       { src: "/images/daisyui.png", name: "DaisyUI" },
     ],
@@ -45,13 +47,12 @@ const skillsData = [
     skills: [
       { src: "/images/git.png", name: "Git" },
       { src: "/images/github.png", name: "GitHub" },
-      { src: "/images/gitlab.png", name: "Gitlab" },
       { src: "/images/vercel.png", name: "Vercel" },
     ],
   },
   {
     title: "Languages",
-    skills: [{ src: "/images/nextjs.png", name: "Nextjs" }],
+    skills: [{ src: "/images/nextjs.png", name: "Next.js" }],
   },
 ];
 
@@ -82,8 +83,8 @@ export default function StackSkills() {
                         <Image
                           src={skill.src}
                           alt={skill.name}
-                          width={60}
-                          height={60}
+                          width={64}
+                          height={64}
                           className="h-auto w-auto"
                         />
                       </div>

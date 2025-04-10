@@ -53,32 +53,38 @@ export default function About() {
           </div>
           {/* ปุ่มเลือกแท็บ */}
           <div className="flex flex-wrap gap-4 mb-6 pt-4">
-            <span
-              onClick={() => setActiveTab("education")}
-              className={`px-4 py-2  transition-all ${
-                activeTab === "education"
-                  ? "text-white border-b-2 hover:border-b-2"
-                  : "hover:border-b-2 hover:border-grey"
-              }`}
-            >
-              Education
-            </span>
-            <span
-              onClick={() => setActiveTab("experience")}
-              className={`px-4 py-2  transition-all ${
-                activeTab === "experience"
-                  ? "text-white border-b-2 hover:border-b-2"
-                  : "hover:border-b-2 hover:border-grey"
-              }`}
-            >
-              Experience
-            </span>
-          </div>
+  <span
+    onClick={() => setActiveTab("education")}
+    className={`px-4 py-2 relative cursor-pointer transition-all duration-300 ease-in-out
+      ${activeTab === "education" ? "text-white" : "text-gray-400"}
+      after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px]
+      after:bg-white after:scale-x-0 after:transition-transform after:duration-300 after:origin-left
+      hover:after:scale-x-100
+      ${activeTab === "education" ? "after:scale-x-100" : ""}
+    `}
+  >
+    Education
+  </span>
+
+  <span
+    onClick={() => setActiveTab("experience")}
+    className={`px-4 py-2 relative cursor-pointer transition-all duration-300 ease-in-out
+      ${activeTab === "experience" ? "text-white" : "text-gray-400"}
+      after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px]
+      after:bg-white after:scale-x-0 after:transition-transform after:duration-300 after:origin-left
+      hover:after:scale-x-100
+      ${activeTab === "experience" ? "after:scale-x-100" : ""}
+    `}
+  >
+    Experience
+  </span>
+</div>
+
 
           {/* แสดงข้อมูลตามแท็บที่เลือก */}
           <div className="min-h-[150px]">
           {activeTab === "education" && (
-        <div>
+        <div className="animate-fade-up">
           <ul>
             <li className="mt-4 font-semibold text-white"> วิทยาศาสตร์บัณฑิต (สาขาเทคโนโลยีสารสนเทศและการสื่อสารดิจิทัล)</li>
             <li className="ml-px">มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี | 5 กรกฎาคม 2564 - ปัจจุบัน</li>
@@ -89,7 +95,7 @@ export default function About() {
       )}
 
       {activeTab === "experience" && (
-        <div>
+        <div className="animate-fade-up">
           <ul>
             <li className="mt-4 font-semibold text-white">Front-end Developer (Intern)</li>
             <li className="ml-px">Kratos innotech co., ltd. | 9 เมษายน - 31 ตุลาคม 2567 (7 เดือน)</li>

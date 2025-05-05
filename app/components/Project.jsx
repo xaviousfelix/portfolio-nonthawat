@@ -17,6 +17,8 @@ const projects = [
       "Spring Boot",
       "PostgreSQL",
     ],
+
+    
   },
 ];
 

@@ -12,7 +12,7 @@ export default function About() {
       className="flex flex-col lg:flex-row items-center gap-10 sm:my-40 scroll-mt-28 lg:my-60 text-white"
     >
       {/* รูปภาพ */}
-      <div className="w-[1000px] h-[1000px] md:w-[700px] md:h-[700px] ">
+      <div className="lg:w-[600px] lg:h-[600px] md:w-[500px] md:h-[500px] sd:w-[100px] sd:h-[100px]">
         <Image
           src="/images/imagemyself1.jpg"
           alt="hero image"

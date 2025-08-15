@@ -56,6 +56,7 @@ export default function Contact() {
                   <div
                     key={iconsIndex}
                     className="flex flex-col items-center p-1 rounded-lg transition-all duration-300 hover:scale-125"
+                    
                   >
                     <div className="flex items-center justify-center mb-2 h-full w-full">
                       <Link href={icons.pathURL} target="_blank">

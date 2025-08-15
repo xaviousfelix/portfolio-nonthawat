@@ -48,103 +48,75 @@ export default function HeroSection() {
     }
   }, []);
   return (
-    <section className="lg:py-16 ">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-        >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="bg-gradient-to-r from-green-400 to-stone-300 bg-clip-text text-transparent">
-              สวัสดีครับ, ผม{""}
-            </span>
-            <br />
-            <TypeAnimation
-              sequence={[
-                "น็อต",
-                1000,
-                "Junior Developer",
-                1000,
-                "UX/UI Designer",
-                1000,
-                "Software Engineer",
-                1000,
-                "FullStack Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </h1>
-          <p className="text-white text-base sm:text-lg mb-6 lg:text-xl">
-            ปัจจุบันเป็นนักศึกษาจาก มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี
-            คณะวิทยาศาสตร์และเทคโนโลยี สาขาเทคโนโลยีสารสนเทศและการสื่อสารดิจิทัล
-            ชั้นปีที่ 4 มีประสบการณ์ในการทำเว็บไซต์ E-commerce ช่วงฝึกงาน
-            โดยใช้เทคโนโลยี (Html, scss, css, Node.js, msSQL, PHP)
-            ผมกำลังมองหาโอกาสในการทำงานในสายงาน Developer และ Designer ครับ |
-          </p>
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <Link
-              href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full 
-    bg-gradient-to-r from-green-500 to-stone-500 
-    text-white transition-all duration-300 ease-in-out transform 
-    hover:scale-105 hover:shadow-lg hover:from-green-400 hover:to-stone-400 
-    active:scale-95"
-            >
-              Contact Me
-            </Link>
-
-            <button
-              onClick={handleDownload}
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-r from-green-500 to-stone-500 hover:bg-slate-800 text-white"
-            >
-              <span className="block bg-[#121212] hover:bg-green-900 rounded-full px-5 py-2">
-                Download CV
+    <section className="lg:py-16 md:py-12 sm:py-8">
+        <div className="grid grid-cols-2 sm:grid-cols-12 sm:justify-self-center items-center">
+          {/* ข้อความบน */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="col-span-12 sm:col-span-12 place-self-center text-center justify-self-center order-1 sm:order-1"
+          >
+            <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+              <span className="bg-gradient-to-r from-green-400 to-stone-300 bg-clip-text text-transparent">
+                สวัสดีครับ, ผม
               </span>
-            </button>
+              <br />
+              <TypeAnimation
+                sequence={[
+                  "น็อต",
+                  1000,
+                  "Junior Developer",
+                  1000,
+                  "UX/UI Designer",
+                  1000,
+                  "Software Engineer",
+                  1000,
+                  "FullStack Developer",
+                  1000,
+                  "Pre Sale",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </h1>
+          </motion.div>
 
-            <div className="flex items-center space-x-2">
-              {SocialIcons.map((category, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  {category.Social.map((icons, iconsIndex) => (
-                    <Link key={iconsIndex} href={icons.pathURL} target="_blank">
-                      <Image
-                        src={icons.src}
-                        alt={icons.name}
-                        width={36}
-                        height={36}
-                        className="h-auto w-auto transition-transform duration-300 hover:scale-125"
-                        priority={true}
-                      />
-                    </Link>
-                  ))}
-                </div>
-              ))}
+          {/* รูปภาพ อยู่ระหว่างกลางเมื่อเป็นมือถือ */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="col-span-6 sm:col-span-4 place-self-center order-2 sm:order-3 mt-6 sm:mt-0"
+          >
+            <div className="mask mask-squircle md:mask-squircle-2xl w-3/4 lg:w-full mx-auto">
+              <Image
+                src="/images/newimage1.jpg"
+                alt="hero image"
+                width={500}
+                height={500}
+                priority
+              />
             </div>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-          <div className="mask mask-squircle md:mask-squircle-2xl w-3/4 lg:w-full mx-auto">
-            <Image
-              src="/images/newimage1.jpg"
-              alt="hero image"
-              className=""
-              width={500}
-              height={500}
-              priority
-            />
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+
+          {/* ข้อความล่าง */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="col-span-12 sm:col-span-8 place-self-center text-center justify-self-center order-3 sm:order-2"
+          >
+            <p className="text-white text-base sm:text-lg mb-6 lg:text-xl">
+              ปัจจุบันเป็นนักศึกษาจาก มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี ...
+            </p>
+            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6">
+              {/* ปุ่มและไอคอน */}
+            </div>
+          </motion.div>
+        </div>   
     </section>
   );
 }

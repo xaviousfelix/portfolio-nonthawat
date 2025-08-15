@@ -11,10 +11,10 @@ import Project from "./components/Project";
 export default function Home() {
 
   return (
-    <main className="flex min-h-screen flex-col" data-theme="dark" >
+    <main className="flex min-h-screen flex-col sm-col-span-12" data-theme="dark" >
       <div>
         <Header />
-        <div className="container mt-24 mx-auto px-12 py-4">
+        <div className="container mt-24 mx-auto px-12 py-4 sm:mt-32 sm:px-6" suppressHydrationWarning>
           <HeroSection />
           <About />
           <Project />

@@ -17,8 +17,21 @@ const projects = [
       "Spring Boot",
       "PostgreSQL",
     ],
-
-    
+  },
+  {
+    title: "CampingWorkShop",
+    description:
+      "เว็บไซต์ที่ช่วยให้ผู้ใช้สามารถค้นหาและจองสถานที่ตั้งแคมป์ได้อย่างง่ายดาย",
+    image: "/images/Campingwebsite.png",
+    techStack: [
+      "Next.js",
+      "Shadcn UI",
+      "TailwindCSS",
+      "Clerk",
+      "Zod",
+      "Prisma",
+      "Supabase",
+    ],
   },
 ];
 
